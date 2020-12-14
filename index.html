@@ -272,10 +272,10 @@
       ];
       const old = document.getElementById("old");
       const newShape = document.getElementById("newShape");
-      const reHex = /[0-9A-Fa-f]{2}/g;
+      const reHex = /[0-9A-F]{2}/g;
       old.addEventListener("keyup", () => {
         old.value = old.value.toUpperCase();
-        if (old.value.length == "2" && reHex.test(old.value) ) {
+        if (reHex.test(old.value) ) {
           newShape.innerText = newNoise[parseInt(old.value, 16)];
         } else {
           newShape.innerText = "";
