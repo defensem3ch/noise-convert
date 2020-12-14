@@ -275,7 +275,6 @@
       old.addEventListener("keyup", () => {
         old.value = old.value.toUpperCase();
         if (old.value.length == "2" && parseInt(old.value, 16) >= 0 && parseInt(old.value, 16) <= 255) {
-          console.log(old.value);
           newShape.innerText = newNoise[parseInt(old.value, 16)];
         } else if (old.value.length == "2") {
           newShape.innerText = "Please enter a valid noise shape from 00-FF";
