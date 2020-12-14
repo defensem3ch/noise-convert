@@ -272,17 +272,15 @@
       ];
       const old = document.getElementById("old");
       const newShape = document.getElementById("newShape");
+      const reHex = /[0-9A-Fa-f]{2}/g;
       old.addEventListener("keyup", () => {
         old.value = old.value.toUpperCase();
-        if (old.value.length == "2" && parseInt(old.value, 16) >= 0 && parseInt(old.value, 16) <= 255) {
+        if (old.value.length == "2" && reHex.test(old.value) ) {
           newShape.innerText = newNoise[parseInt(old.value, 16)];
-        } else if (old.value.length == "2") {
-          newShape.innerText = "Please enter a valid noise shape from 00-FF";
         } else {
           newShape.innerText = "";
           }
       });
-
     </script>
   </body>
 </html>
