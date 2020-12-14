@@ -271,16 +271,26 @@
         "3F",
       ];
       const old = document.getElementById("old");
+      const button = document.getElementById("button");
       const newShape = document.getElementById("newShape");
-      const reHex = /[0-9A-F]{2}/g;
       old.addEventListener("keyup", () => {
         old.value = old.value.toUpperCase();
-        if (reHex.test(old.value) ) {
-          newShape.innerText = newNoise[parseInt(old.value, 16)];
-        } else {
-          newShape.innerText = "";
+        const validHex = (input) => {
+          const hex = '0123456789ABCDEF';
+          for (let i = 0; i < 2; i++) {
+            if (hex.includes(input[i])) {
+              continue;
+            }
+            return false;
           }
-      });
+          return true;
+        }
+          if (validHex(old.value)) {
+            newShape.innerText = newNoise[parseInt(old.value, 16)];
+          } else {
+            newShape.innerText = "";
+          }
+        });
     </script>
   </body>
 </html>
