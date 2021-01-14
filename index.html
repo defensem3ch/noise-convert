@@ -443,7 +443,7 @@
         let oldNoiseVal = validHex(oldNoise.value) ? parseInt(oldNoise.value, 16) : "";
         let oldScmdVal = validHex(oldScmd.value) ? parseInt(oldScmd.value, 16) : "";
         let oldFinalVal =
-          oldNoiseVal != "" && oldScmdVal != "" ? (oldNoiseVal + oldScmdVal) % 256 : "";
+          oldNoiseVal != "" && oldScmdVal != "" ? ("0" + (oldNoiseVal + oldScmdVal) % 256).slice(-2) : "";
         let newNoiseVal = validHex(oldNoise.value) ? newNoiseArr[parseInt(oldNoise.value, 16)] : "";
         let newFinalVal = oldFinalVal != "" ? newNoiseArr[parseInt(oldFinalVal)] : "";
         let newIndex =
