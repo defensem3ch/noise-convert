@@ -204,8 +204,8 @@
         "D-1",
         "F-1",
         "G#-1",
-        "C0",
-        "F0",
+        "C 0",
+        "F 0",
         "C 1",
         "C 2",
         "C 3",
@@ -443,9 +443,9 @@
         let oldNoiseVal = validHex(oldNoise.value) ? parseInt(oldNoise.value, 16) : "";
         let oldScmdVal = validHex(oldScmd.value) ? parseInt(oldScmd.value, 16) : "";
         let oldFinalVal =
-          oldNoiseVal != "" && oldScmdVal != "" ? ("0" + (oldNoiseVal + oldScmdVal) % 256).slice(-2) : "";
+          oldNoiseVal != "" && oldScmdVal != "" ? mod(oldNoiseVal + oldScmdVal,256) : "";
         let newNoiseVal = validHex(oldNoise.value) ? newNoiseArr[parseInt(oldNoise.value, 16)] : "";
-        let newFinalVal = oldFinalVal != "" ? newNoiseArr[parseInt(oldFinalVal)] : "";
+        let newFinalVal = oldFinalVal != "" ? newNoiseArr[oldFinalVal] : "";
         let newIndex =
           orderedNewNoiseArr.indexOf(newNoiseVal) != -1
             ? orderedNewNoiseArr.indexOf(newNoiseVal)
@@ -458,7 +458,7 @@
           newIndex != "" && newFinalIndex != ""
             ? ("0" + mod(newFinalIndex - newIndex, 120).toString(16).toUpperCase()).slice(-2)
             : "";
-        oldFinal.innerText = oldFinalVal.toString(16).toUpperCase();
+        oldFinal.innerText = ("0" + oldFinalVal.toString(16).toUpperCase()).slice(-2);
         newNoise.innerText = newNoiseVal;
         newFinal.innerText = newFinalVal;
         newScmd.innerText = newScmdVal;
