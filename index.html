@@ -20,25 +20,46 @@
     </style>
   </head>
   <body>
-    <p>
-      Old noise value:
-      <input
-        type="text"
-        value=""
-        name="oldNoise"
-        id="oldNoise"
-        maxlength="2"
-        style="width: 30px;"
-      />
-    </p>
-    <p>
-      Old S cmd or TSP:
-      <input type="text" value="" name="oldScmd" id="oldScmd" maxlength="2" style="width: 30px;" />
-    </p>
-    <p>Old final value: <label id="oldFinal"></label></p>
-    <p>New noise value: <label id="newNoise"></label></p>
-    <p>New S cmd or TSP: <label id="newScmd"></label></p>
-    <p>New final value: <label id="newFinal"></label></p>
+    <table>
+      <tr>
+        <td>Old noise value:</td>
+        <td>
+          <input
+            type="text"
+            value=""
+            name="oldNoise"
+            id="oldNoise"
+            maxlength="2"
+            style="width: 30px;"
+          />
+        </td>
+        <td>New noise value:</td>
+        <td><label id="newNoise"></label></td>
+      </tr>
+      <tr>
+        <td>
+          Old S cmd or TSP:
+        </td>
+        <td>
+          <input
+            type="text"
+            value=""
+            name="oldScmd"
+            id="oldScmd"
+            maxlength="2"
+            style="width: 30px;"
+          />
+        </td>
+        <td>New S cmd or TSP:</td>
+        <td><label id="newScmd"></label></td>
+      </tr>
+      <tr>
+        <td>Old final value:</td>
+        <td><label id="oldFinal"></label></td>
+        <td>New final value:</td>
+        <td><label id="newFinal"></label></td>
+      </tr>
+    </table>
     <script charset="utf-8">
       const newNoiseArr = [
         "unused",
@@ -443,7 +464,7 @@
         let oldNoiseVal = validHex(oldNoise.value) ? parseInt(oldNoise.value, 16) : "";
         let oldScmdVal = validHex(oldScmd.value) ? parseInt(oldScmd.value, 16) : "";
         let oldFinalVal =
-          oldNoiseVal != "" && oldScmdVal != "" ? mod(oldNoiseVal + oldScmdVal,256) : "";
+          oldNoiseVal != "" && oldScmdVal != "" ? mod(oldNoiseVal + oldScmdVal, 256) : "";
         let newNoiseVal = validHex(oldNoise.value) ? newNoiseArr[parseInt(oldNoise.value, 16)] : "";
         let newFinalVal = oldFinalVal != "" ? newNoiseArr[oldFinalVal] : "";
         let newIndex =
@@ -456,7 +477,12 @@
             : "";
         let newScmdVal =
           newIndex != "" && newFinalIndex != ""
-            ? ("0" + mod(newFinalIndex - newIndex, 120).toString(16).toUpperCase()).slice(-2)
+            ? (
+                "0" +
+                mod(newFinalIndex - newIndex, 120)
+                  .toString(16)
+                  .toUpperCase()
+              ).slice(-2)
             : "";
         oldFinal.innerText = ("0" + oldFinalVal.toString(16).toUpperCase()).slice(-2);
         newNoise.innerText = newNoiseVal;
