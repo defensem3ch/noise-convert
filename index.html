@@ -481,13 +481,13 @@
         let newScmdVal =
           newIndex != "" && newFinalIndex != ""
             ? (
-                "0" +
+                "00" +
                 mod(newFinalIndex - newIndex, 120)
                   .toString(16)
                   .toUpperCase()
               ).slice(-2)
             : "";
-        oldFinal.innerText = ("0" + oldFinalVal.toString(16).toUpperCase()).slice(-2);
+        oldFinal.innerText = ("00" + oldFinalVal.toString(16).toUpperCase()).slice(-2);
         newNoise.innerText = newNoiseVal;
         newFinal.innerText = newFinalVal;
         newScmd.innerText = newScmdVal;
