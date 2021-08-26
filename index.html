@@ -20,13 +20,26 @@
         font-weight: bold;
         font-size: 110%;
       }
-      td {
+      #convert td {
         width: 150px;
+      }
+      #fullgrid {
+        text-align: center;
+        width: 700px;
+        margin-top: 100px;
+        border: gray 1px solid;
+        border-collapse: collapse;
+      }
+      #fullgrid td {
+        border: gray 1px solid;
+      }
+      #fullgrid th {
+        border: gray 1px solid;
       }
     </style>
   </head>
   <body>
-    <table>
+    <table id="convert">
       <tr>
         <td>Old noise value:</td>
         <td>
@@ -505,5 +518,334 @@
         convertNoise();
       });
     </script>
+    <table id="fullgrid">
+      <thead>
+        <tr>
+          <th></th>
+          <th>x0</th>
+          <th>x1</th>
+          <th>x2</th>
+          <th>x3</th>
+          <th>x4</th>
+          <th>x5</th>
+          <th>x6</th>
+          <th>x7</th>
+          <th>x8</th>
+          <th>x9</th>
+          <th>xA</th>
+          <th>xB</th>
+          <th>xC</th>
+          <th>xD</th>
+          <th>xE</th>
+          <th>xF</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>0x</b></td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>N/A</td>
+        </tr>
+        <tr>
+          <td><b>1x</b></td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>N/A</td>
+        </tr>
+        <tr>
+          <td><b>2x</b></td>
+          <td>D-9</td>
+          <td>F-9</td>
+          <td>G#-9</td>
+          <td>C-8</td>
+          <td>F-8</td>
+          <td>C-7</td>
+          <td>C-6</td>
+          <td>C-5</td>
+          <td>00</td>
+          <td>01</td>
+          <td>02</td>
+          <td>03</td>
+          <td>05</td>
+          <td>07</td>
+          <td>0B</td>
+          <td>0F</td>
+        </tr>
+        <tr>
+          <td><b>3x</b></td>
+          <td>D-8</td>
+          <td>F-8</td>
+          <td>G#-8</td>
+          <td>C-7</td>
+          <td>F-7</td>
+          <td>C-6</td>
+          <td>C-5</td>
+          <td>C-4</td>
+          <td>04</td>
+          <td>05</td>
+          <td>06</td>
+          <td>07</td>
+          <td>09</td>
+          <td>0B</td>
+          <td>0F</td>
+          <td>13</td>
+        </tr>
+        <tr>
+          <td><b>4x</b></td>
+          <td>D-7</td>
+          <td>F-7</td>
+          <td>G#-7</td>
+          <td>C-6</td>
+          <td>F-6</td>
+          <td>C-5</td>
+          <td>C-4</td>
+          <td>C-3</td>
+          <td>08</td>
+          <td>09</td>
+          <td>0A</td>
+          <td>0B</td>
+          <td>0D</td>
+          <td>0F</td>
+          <td>13</td>
+          <td>17</td>
+        </tr>
+        <tr>
+          <td><b>5x</b></td>
+          <td>D-6</td>
+          <td>F-6</td>
+          <td>G#-6</td>
+          <td>C-5</td>
+          <td>F-5</td>
+          <td>C-4</td>
+          <td>C-3</td>
+          <td>C-2</td>
+          <td>0C</td>
+          <td>0D</td>
+          <td>0E</td>
+          <td>0F</td>
+          <td>11</td>
+          <td>13</td>
+          <td>17</td>
+          <td>1B</td>
+        </tr>
+        <tr>
+          <td><b>6x</b></td>
+          <td>D-5</td>
+          <td>F-5</td>
+          <td>G#-5</td>
+          <td>C-4</td>
+          <td>F-4</td>
+          <td>C-3</td>
+          <td>C-2</td>
+          <td>C-1</td>
+          <td>10</td>
+          <td>11</td>
+          <td>12</td>
+          <td>13</td>
+          <td>15</td>
+          <td>17</td>
+          <td>1B</td>
+          <td>1F</td>
+        </tr>
+        <tr>
+          <td><b>7x</b></td>
+          <td>D-4</td>
+          <td>F-4</td>
+          <td>G#-4</td>
+          <td>C-3</td>
+          <td>F-3</td>
+          <td>C-2</td>
+          <td>C-1</td>
+          <td>C 0</td>
+          <td>14</td>
+          <td>15</td>
+          <td>16</td>
+          <td>17</td>
+          <td>19</td>
+          <td>1B</td>
+          <td>1F</td>
+          <td>23</td>
+        </tr>
+        <tr>
+          <td><b>8x</b></td>
+          <td>D-3</td>
+          <td>F-3</td>
+          <td>G#-3</td>
+          <td>C-2</td>
+          <td>F-2</td>
+          <td>C-1</td>
+          <td>C 0</td>
+          <td>C 1</td>
+          <td>18</td>
+          <td>19</td>
+          <td>1A</td>
+          <td>1B</td>
+          <td>1D</td>
+          <td>1F</td>
+          <td>23</td>
+          <td>27</td>
+        </tr>
+        <tr>
+          <td><b>9x</b></td>
+          <td>D-2</td>
+          <td>F-2</td>
+          <td>G#-2</td>
+          <td>C-1</td>
+          <td>F-1</td>
+          <td>C 0</td>
+          <td>C 1</td>
+          <td>C 2</td>
+          <td>1C</td>
+          <td>1D</td>
+          <td>1E</td>
+          <td>1F</td>
+          <td>21</td>
+          <td>23</td>
+          <td>27</td>
+          <td>2B</td>
+        </tr>
+        <tr>
+          <td><b>Ax</b></td>
+          <td>D-1</td>
+          <td>F-1</td>
+          <td>G#-1</td>
+          <td>C 0</td>
+          <td>F 0</td>
+          <td>C 1</td>
+          <td>C 2</td>
+          <td>C 3</td>
+          <td>20</td>
+          <td>21</td>
+          <td>22</td>
+          <td>23</td>
+          <td>25</td>
+          <td>27</td>
+          <td>2B</td>
+          <td>2F</td>
+        </tr>
+        <tr>
+          <td><b>Bx</b></td>
+          <td>D 0</td>
+          <td>F 0</td>
+          <td>G# 0</td>
+          <td>C 1</td>
+          <td>F 1</td>
+          <td>C 2</td>
+          <td>C 3</td>
+          <td>C 4</td>
+          <td>24</td>
+          <td>25</td>
+          <td>26</td>
+          <td>27</td>
+          <td>29</td>
+          <td>2B</td>
+          <td>2F</td>
+          <td>33</td>
+        </tr>
+        <tr>
+          <td><b>Cx</b></td>
+          <td>D 1</td>
+          <td>F 1</td>
+          <td>G# 1</td>
+          <td>C 2</td>
+          <td>F 2</td>
+          <td>C 3</td>
+          <td>C 4</td>
+          <td>C 5</td>
+          <td>28</td>
+          <td>29</td>
+          <td>2A</td>
+          <td>2B</td>
+          <td>2D</td>
+          <td>2F</td>
+          <td>33</td>
+          <td>37</td>
+        </tr>
+        <tr>
+          <td><b>Dx</b></td>
+          <td>D 2</td>
+          <td>F 2</td>
+          <td>G# 2</td>
+          <td>C 3</td>
+          <td>F 3</td>
+          <td>C 4</td>
+          <td>C 5</td>
+          <td>C 6</td>
+          <td>2C</td>
+          <td>2D</td>
+          <td>2E</td>
+          <td>2F</td>
+          <td>31</td>
+          <td>33</td>
+          <td>37</td>
+          <td>39</td>
+        </tr>
+        <tr>
+          <td><b>Ex</b></td>
+          <td>D 3</td>
+          <td>F 3</td>
+          <td>G# 3</td>
+          <td>C 4</td>
+          <td>F 4</td>
+          <td>C 5</td>
+          <td>C 6</td>
+          <td>C 7</td>
+          <td>30</td>
+          <td>31</td>
+          <td>32</td>
+          <td>33</td>
+          <td>35</td>
+          <td>37</td>
+          <td>39</td>
+          <td>3A</td>
+        </tr>
+        <tr>
+          <td><b>Fx</b></td>
+          <td>D 4</td>
+          <td>F 4</td>
+          <td>G# 4</td>
+          <td>C 5</td>
+          <td>F 5</td>
+          <td>C 6</td>
+          <td>C 7</td>
+          <td>C 8</td>
+          <td>34</td>
+          <td>35</td>
+          <td>36</td>
+          <td>37</td>
+          <td>38</td>
+          <td>39</td>
+          <td>3A</td>
+          <td>3B</td>
+        </tr>
+      </tbody>
+    </table>
   </body>
 </html>
